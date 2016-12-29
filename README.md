@@ -1,6 +1,6 @@
 # AVContentProposal-Sample
 
-During WWDC 2016 Apple presented their own way of proposing next content to your tvOS users during [session 506](https://developer.apple.com/videos/play/wwdc2016/506/).
+During WWDC 2016 Apple presented their own way of proposing next content to your tvOS users in [session 506](https://developer.apple.com/videos/play/wwdc2016/506/).
 
 Specifically they mention `AVContentProposalDelegate` which is conspicuously absent in the final version of the SDK. Since they focus on the delegate methods during the presentation it's not immediately clear how to implement content proposal. This sample project shows how it's done.
 
@@ -41,4 +41,4 @@ playerViewController.player?.currentItem?.nextContentProposal = proposal
 
 ---
 
-And that's pretty much. Hope you find it useful. If you have any feedback or questions ping me on [Twitter](https://twitter.com/JanGorman).
+That's pretty much it. Check out the sample project for details. I hope you find it useful. If you have any feedback or questions ping me on [Twitter](https://twitter.com/JanGorman).
