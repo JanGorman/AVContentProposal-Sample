@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContentProposal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="004-14-sb2">
+                                <rect key="frame" x="803" y="497" width="314" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Launch Video"/>
+                                <connections>
+                                    <action selector="launchVideo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="wxF-wX-Wm6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="004-14-sb2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="111-g6-axY"/>
+                            <constraint firstItem="004-14-sb2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ysh-z0-xBM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Content Proposal View Controller-->
+        <scene sceneID="KqD-9S-NzN">
+            <objects>
+                <viewController storyboardIdentifier="ContentProposalViewController" id="LJ9-aK-zw0" customClass="ContentProposalViewController" customModule="ContentProposal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I91-gK-JRY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y3f-Tw-JnJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K1S-0u-bzt">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ypi-YN-f7C">
+                                <rect key="frame" x="20" y="20" width="600" height="338"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ypi-YN-f7C" secondAttribute="height" multiplier="16:9" id="Ge3-cp-E3N"/>
+                                    <constraint firstAttribute="width" constant="600" id="wev-iM-fY6"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKJ-qR-Sx4">
+                                <rect key="frame" x="698" y="20" width="160" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="playNext:" destination="LJ9-aK-zw0" eventType="primaryActionTriggered" id="lIb-SG-U8n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSg-w4-2o9">
+                                <rect key="frame" x="918" y="20" width="161" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="LJ9-aK-zw0" eventType="primaryActionTriggered" id="QeK-W5-3vV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiZ-8h-QHC">
+                                <rect key="frame" x="698" y="114" width="140" height="91"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iu9-hO-sjS">
+                                <rect key="frame" x="698" y="213" width="72" height="143"/>
+                                <string key="text">Label
+Label
+Label
+Label</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ypi-YN-f7C" firstAttribute="leading" secondItem="K1S-0u-bzt" secondAttribute="leadingMargin" id="6gB-Uf-SAs"/>
+                            <constraint firstItem="iu9-hO-sjS" firstAttribute="top" secondItem="oiZ-8h-QHC" secondAttribute="bottom" constant="8" id="MPE-aK-Vg6"/>
+                            <constraint firstItem="ypi-YN-f7C" firstAttribute="top" secondItem="I91-gK-JRY" secondAttribute="bottom" constant="20" id="NPF-wi-7Kw"/>
+                            <constraint firstItem="oiZ-8h-QHC" firstAttribute="leading" secondItem="XKJ-qR-Sx4" secondAttribute="leading" id="Y8P-7L-P8S"/>
+                            <constraint firstItem="XKJ-qR-Sx4" firstAttribute="leading" secondItem="ypi-YN-f7C" secondAttribute="trailing" constant="78" id="Zzf-ki-OkE"/>
+                            <constraint firstItem="OSg-w4-2o9" firstAttribute="leading" secondItem="XKJ-qR-Sx4" secondAttribute="trailing" constant="60" id="h9l-Ms-gEc"/>
+                            <constraint firstItem="oiZ-8h-QHC" firstAttribute="top" secondItem="XKJ-qR-Sx4" secondAttribute="bottom" constant="8" id="m3j-Nu-1Fp"/>
+                            <constraint firstItem="OSg-w4-2o9" firstAttribute="top" secondItem="XKJ-qR-Sx4" secondAttribute="top" id="nMM-rT-Foc"/>
+                            <constraint firstItem="iu9-hO-sjS" firstAttribute="leading" secondItem="oiZ-8h-QHC" secondAttribute="leading" id="nR7-AW-pSQ"/>
+                            <constraint firstItem="XKJ-qR-Sx4" firstAttribute="top" secondItem="ypi-YN-f7C" secondAttribute="top" id="ss4-ua-y7S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="iu9-hO-sjS" id="UZi-gU-Cce"/>
+                        <outlet property="nextButton" destination="XKJ-qR-Sx4" id="w8C-c6-Id3"/>
+                        <outlet property="thumbnailImageView" destination="ypi-YN-f7C" id="0v2-6x-PN5"/>
+                        <outlet property="titleLabel" destination="oiZ-8h-QHC" id="NNx-qz-XG7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30t-JC-oEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69" y="1883"/>
+        </scene>
+    </scenes>
+</document>
